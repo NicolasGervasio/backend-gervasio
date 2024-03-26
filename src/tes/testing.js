@@ -1,6 +1,5 @@
-const ProductManager = require ("./productManager.js");
-
-const producto = new ProductManager();
+import ProductManager from "../productManager.js";
+const product = new ProductManager();
 
 /* console.log(producto.addProduct('ROG Phone 6 Pro', 'Celular ASUS', 2000, 'https://dlcdnwebimgs.asus.com/gain/1A2622B0-28FA-447A-9F20-88E02A441EEE/w1000/h732', '156', '10'));
 console.log(producto.addProduct('iPhone 13', 'Apple iPhone 13', 990, 'https://http2.mlstatic.com/D_NQ_NP_973345-MLA47781591382_102021-O.webp', '698', '16'));
