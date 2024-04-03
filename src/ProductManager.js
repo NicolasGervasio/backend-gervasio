@@ -40,9 +40,10 @@ class ProductManager {
         }
     }
 
-    addProduct(title, description, price, thumbnail, code, stock) {
-        if (!title || !description || !price || !thumbnail || !code || !stock) {
-            return 'Todos los parametros son requeridos [title, description, price, thumbnail, code, stock]';
+    addProduct(title, description, price, thumbnail, code, stock, category, status = true) {
+        
+        if (!title || !description || !price || !thumbnail || !code || !stock || !category) {
+            return 'Todos los parametros son requeridos [title, description, price, thumbnail, code, stock, category]';
         }
 
         const codeRepetido = this.#products.some(product => product.code === code);
@@ -61,11 +62,13 @@ class ProductManager {
             thumbnail,
             code,
             stock,
+            category,
+            status
         };
         this.#products.push(newProduct);
         this.#SaveFile();
 
-        return 'Producto agregado correctamente';
+        return "producto agregado correctamente";
     }
 
     getProducts(limit = 0) {
@@ -76,24 +79,34 @@ class ProductManager {
     }
 
     getProductById(id) {
+        let status = false;
+        let resp = `El producto con id ${id} no existe.`;
+
         const product = this.#products.find(product => product.id == id);
         if (product) {
-            return product;
-        } else {
-            return `Not found del producto con id ${id}`;
-        }
+            status = true;
+            resp = product
+        } 
+
+        return {status, resp}
     }
 
     updateProduct(id, updateObjets) {
-        let mensaje = `El producto ${id} no existe`;
+        let mensaje = `El product ${id} no existe`;
 
         const index = this.#products.findIndex(p => p.id === id);
 
         if (index !== -1) {
             const { id, ...rest } = updateObjets;
+            const propiedadesPermitidas = ["title", "description", "price", "thumbnails", "code", "stock", "category", "status"]
+            .filter(propiedad => propiedadesPermitidas.includes(propiedad))
+            .reduce((obj,key) => {
+                obj[key] = rest[key];
+                return obj;
+            }, {});
             this.#products[index] = { ...this.#products[index], ...rest };
             this.#SaveFile();
-            mensaje = 'Producto actualizado';
+            mensaje = 'producto actualizado';
         }
 
         return mensaje;
