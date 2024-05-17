@@ -1,0 +1,66 @@
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 2px solid #c8e6c9;
+}
+
+th {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+td {
+    background-color: #e8f5e9;
+}
+
+.cart-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: #388e3c;
+}
+
+.cart-icon {
+    margin-right: 8px;
+}
+
+.pagination {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #a5d6a7;
+    border: 2px solid #c8e6c9;
+    margin-right: 8px;
+    text-decoration: none;
+    color: #1b5e20;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #81c784;
+}
+
+.pagination span {
+    margin-right: 8px;
+    font-weight: bold;
+    color: #388e3c;
+}

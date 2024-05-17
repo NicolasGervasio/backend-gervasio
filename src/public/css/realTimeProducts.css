@@ -1,0 +1,76 @@
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.product-table th, .product-table td {
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    background-color: #ecf0f1;
+}
+
+.product-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #ecf0f1;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #c0392b;
+}

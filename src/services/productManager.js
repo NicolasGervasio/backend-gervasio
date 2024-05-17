@@ -47,11 +47,21 @@ export const getProductsService = async ({ limit = 2, page = 1, sort, query }) =
         console.log('getProductsService', error);
         throw error;
     }
-}
+};
+
+export const getProductsByIdService = async (pid) => {
+    try {
+        const { pid } = req.params;
+        return await productModel.findById(pid);
+    } catch (error) {
+        console.log('getProductByIdService', error);
+        throw error;
+    }
+};
 
 export const addProductService = async ({ title, description, price, code, stock }) => {
     try {
-        return await productModel.create({ title, description, price, code, stock });
+        return await productModel.create({});
     } catch (error) {
         console.log('addProductService', error);
         throw error;

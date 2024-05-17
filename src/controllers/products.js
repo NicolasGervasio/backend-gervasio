@@ -1,6 +1,6 @@
 import { query, request, response } from "express";
 import { productModel } from "../dao/models/products.js";
-import { deleteProductService, getProductsService } from "../services/productManager.js";
+import { addProductService, deleteProductService, getProductsByIdService, getProductsService } from "../services/productManager.js";
 
 export const getProducts = async (req = request, res = response) => {
     try {
@@ -37,6 +37,7 @@ export const addProduct = async (req = request, res = response) => {
         return res.status(500).json({ error: 'Error al agregar productos' });
     }
 };
+
 
 export const updateProducts = async (req = request, res = response) => {
     try {

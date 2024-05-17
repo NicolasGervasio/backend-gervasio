@@ -1,10 +1,10 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-const nameCollection = 'Messages';
-
-const messagesSchema = new Schema({
-    user:{type:String, required:[true, 'El nombre del usuario es obligatorio']},
-    massage:{type:String, required:[true, 'El mensaje del usuario es obligatorio']}
+const messageSchema = new Schema({
+    user: { type: String, required: [true, 'El usuario es obligatorio.'] },
+    message: { type: String, required: [true, 'El mensaje del usuario es obligatorio.'] }
+}, {
+    timestamps: true
 });
 
-export const messageModel = model(nameCollection, messagesSchema);
+export const messageModel = model('Message', messageSchema);

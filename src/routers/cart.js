@@ -11,4 +11,3 @@ router.put('/:cid/products/:pid', updateProductsInCart);
 router.delete('/:cid', deleteCart);
 
 export default router;
-

@@ -1,5 +1,5 @@
 const socket = io();
-console.log("Conexión establecida.")
+console.log("Conexión con el socket establecida.")
 
 
 socket.on("productos", productos => {
@@ -42,5 +42,5 @@ formulario.addEventListener("submit", function (event) {
     };
 
     socket.emit("agregarProducto", producto);
-    formulario.requestFullscreen();
+
 });
