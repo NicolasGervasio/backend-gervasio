@@ -1,13 +1,13 @@
 <header>
     <div class="header-container">
-        <h2>Bienvend@s a mi proyecto</h2>
+        <h2>Bienvendio</h2>
         <nav>
             {{#if user}}
-            <p>Bienvenid@, {{user}}</p>
+            <p>Bienvenido, {{user.email}}</p>
             <a href="/logout">Cerrar sesión.</a>
             {{else}}
             <a href="/login">Iniciar sesión.</a>
-            <a href="/register">Resgistarse.</a>
+            <a href="/register">Resgistarse aquí.</a>
             {{/if}}
         </nav>
     </div>
